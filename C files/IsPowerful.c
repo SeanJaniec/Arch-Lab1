@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool IsPowerful(int num){
+const char* IsPowerful(int num){
 
     int primeNumbers[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97};
     
@@ -13,7 +13,7 @@ bool IsPowerful(int num){
     {
         if(num % primeNumbers[i] == 0)
         {
-            primeFactors[num] = primeNumbers[i];
+            primeFactors[index] = primeNumbers[i];
 
             index++;
             
@@ -25,12 +25,14 @@ bool IsPowerful(int num){
     {
         if ( num % (primeFactors[i] * primeFactors[i]) == 0)
         {
-            return true;
+            
+            return "True";
+            
         }
         
     }
 
-    return false;
+    return "False";
     
 
 
@@ -40,8 +42,8 @@ bool IsPowerful(int num){
 int main(){
 
 
-
-    IsPowerful(64);
+    printf("%s", IsPowerful(64));
+    
     
     
 
