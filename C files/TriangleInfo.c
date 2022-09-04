@@ -3,17 +3,21 @@
 
 int main(){
 
-    int a;
-    int b;
-    int c;
+    double a;
+    double b;
+    double c;
     printf("Enter 3 sides of a triangle:");
-    scanf("%d", &a);
-    scanf("%d", &b);
-    scanf("%d", &c);
+    scanf("%1f", &a);
+    scanf("%1f", &b);
+    scanf("%1f", &c);
 
     double semi = (a + b + c)/2;
 
-    double a = sqrt(semi(semi - a)(semi - b)(semi - c));
+    double a1 = semi - a;
+    double b1 = semi - b;
+    double c1 = semi - c;
+
+    double area = a1 * b1 * c1 * semi;
 
 
 
